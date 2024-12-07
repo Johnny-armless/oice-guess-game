@@ -138,7 +138,7 @@ const App: React.FC = () => {
             setReloadAudio((prev) => !prev); // Recarrega o áudio
             console.log(`Next voice: ${currentVoiceIndex + 1}`);
         } else {
-            // Finaliza o nível se todas as vozes foram processadas
+            // Finaliza o nível se todas as vozes foram processadas(ver se o commit ta sendo feito corretamente.)
             setLevelCompleted(true);
             console.log("Level completed!");
         }

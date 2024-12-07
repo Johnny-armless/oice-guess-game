@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "incremental": true, // Habilita compilação incremental
+    "noEmit": true,
+    "isolatedModules": true
+  },
+  "include": ["src"]
+}

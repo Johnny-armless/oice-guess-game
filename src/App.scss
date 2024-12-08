@@ -1,0 +1,159 @@
+/* App.scss */
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Container principal */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Estilos do Score */
+.score {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos do botão "Next Voice" */
+.next-voice-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #45a049;
+    }
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+}
+
+/* Input de texto */
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Estilos para o componente Hint */
+.hint-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hint-button:disabled {
+    background-color: #ccc;
+}
+
+.hint-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Teclado */
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.keyboard-button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #ddd;
+    }
+
+    &:active {
+        background-color: #ccc;
+    }
+}
+
+/* Layout para o Fim do Jogo */
+.level-completed {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+.result {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilos para a resposta correta */
+.correct-answer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50; /* Verde, para destacar a palavra correta */
+}

@@ -1,0 +1,26 @@
+.level-selector-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #a7a5a5;
+    border-bottom: 3px solid #ccc;
+}
+
+.level-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: none;  // Remove a transformação para maiúsculas padrão
+}
+
+.easy-button {
+    background-color: #4CAF50;
+}
+
+.medium-button {
+    background-color: #FFC107;
+}
+
+.hard-button {
+    background-color: #F44336;
+}

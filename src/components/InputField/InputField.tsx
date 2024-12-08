@@ -1,4 +1,5 @@
 import React from "react";
+import './InputField.scss';  // Importando a estilização SCSS
 
 interface InputFieldProps {
     value: string; // Valor atual do input
@@ -7,7 +8,7 @@ interface InputFieldProps {
     placeholder?: string; // Placeholder personalizável (opcional)
 }
 
-const InputField: React.FC<InputFieldProps> = ({ value, onChange, onSubmit, placeholder = "Who is speaking?" }) => {
+const InputField: React.FC<InputFieldProps> = ({ value, onChange, onSubmit, placeholder = "Quem está falando?" }) => {
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
             event.preventDefault(); // Impede comportamento padrão
@@ -15,29 +16,15 @@ const InputField: React.FC<InputFieldProps> = ({ value, onChange, onSubmit, plac
         }
     };
 
-    // Estilização separada
-    const inputStyle: React.CSSProperties = {
-        padding: "10px",
-        fontSize: "16px",
-        width: "250px",
-        textAlign: "center",
-        border: "2px solid #ccc",
-        borderRadius: "5px",
-    };
-
-    const containerStyle: React.CSSProperties = {
-        marginTop: "20px",
-    };
-
     return (
-        <div style={containerStyle}>
+        <div className="input-container">
             <input
                 type="text"
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 onKeyDown={handleKeyPress} // Adiciona a lógica do teclado
                 placeholder={placeholder}
-                style={inputStyle}
+                className="input-field"
             />
         </div>
     );

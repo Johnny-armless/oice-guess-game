@@ -1,4 +1,5 @@
 import React from "react";
+import './Keyboard.scss';  // Importando a estilização SCSS
 
 interface KeyboardProps {
     onKeyPress: (key: string) => void;
@@ -7,43 +8,16 @@ interface KeyboardProps {
 const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
     const keyboardRows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 
-    // Estilizações
-    const containerStyle: React.CSSProperties = {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        marginTop: "20px",
-    };
-
-    const rowStyle: React.CSSProperties = {
-        display: "flex",
-        marginBottom: "10px",
-    };
-
-    const buttonStyle: React.CSSProperties = {
-        margin: "5px",
-        padding: "10px 15px",
-        fontSize: "16px",
-        cursor: "pointer",
-        border: "1px solid #ccc",
-        borderRadius: "5px",
-    };
-
-    const specialButtonStyle: React.CSSProperties = {
-        ...buttonStyle,
-        backgroundColor: "#f0f0f0",
-    };
-
     return (
-        <div style={containerStyle}>
+        <div className="keyboard-container">
             {/* Teclas principais */}
             {keyboardRows.map((row, rowIndex) => (
-                <div key={rowIndex} style={rowStyle}>
+                <div key={rowIndex} className="keyboard-row">
                     {row.split("").map((key) => (
                         <button
                             key={key}
                             onClick={() => onKeyPress(key)}
-                            style={buttonStyle}
+                            className="keyboard-button"
                             aria-label={`Key ${key}`}
                         >
                             {key}
@@ -55,14 +29,14 @@ const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
             <div>
                 <button
                     onClick={() => onKeyPress("Backspace")}
-                    style={specialButtonStyle}
+                    className="keyboard-special-button"
                     aria-label="Key Backspace"
                 >
                     Backspace
                 </button>
                 <button
                     onClick={() => onKeyPress("Enter")}
-                    style={{ ...specialButtonStyle, backgroundColor: "#d4edda" }}
+                    className="keyboard-special-button enter-button"
                     aria-label="Key Enter"
                 >
                     Enter

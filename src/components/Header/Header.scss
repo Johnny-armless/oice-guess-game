@@ -1,0 +1,35 @@
+.header-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.score-container {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.score-container.success {
+    background-color: #4CAF50;  /* Verde para quando a pontuação é maior ou igual a 33 */
+}
+
+.score-container.error {
+    background-color: #F44336;  /* Vermelho para quando a pontuação é menor que 33 */
+}
+
+.score-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}

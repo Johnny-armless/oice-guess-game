@@ -1,0 +1,25 @@
+.next-voice-button-container {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;  /* Centraliza verticalmente */
+    position: absolute;  /* Posiciona o botão fora do fluxo normal da página */
+    bottom: 185px;  /* Ajuste de posição para que o botão fique na parte inferior */
+    left: 0;
+    right: 0;
+}
+
+.next-voice-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+}

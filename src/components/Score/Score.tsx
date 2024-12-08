@@ -1,4 +1,5 @@
 import React from "react";
+import './Score.scss';  // Importando o arquivo SCSS de estilização
 
 interface ScoreProps {
     score: number; // Pontuação atual do jogador
@@ -6,9 +7,9 @@ interface ScoreProps {
 
 const Score: React.FC<ScoreProps> = ({ score }) => {
     return (
-        <div style={{ marginBottom: "20px" }}>
-            <h2 style={{ fontSize: "24px", fontWeight: "bold" }}>
-                Score: {score}
+        <div className="score-container">
+            <h2 className="score-text">
+                Pontos: {score}
             </h2>
         </div>
     );

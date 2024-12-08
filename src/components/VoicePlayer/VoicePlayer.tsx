@@ -1,4 +1,5 @@
 import React from "react";
+import './VoicePlayer.scss';  // Importando o arquivo SCSS de estilização
 
 interface VoicePlayerProps {
     audioSrc: string; // O caminho do arquivo de áudio
@@ -6,14 +7,8 @@ interface VoicePlayerProps {
 }
 
 const VoicePlayer: React.FC<VoicePlayerProps> = ({ audioSrc, onEnded }) => {
-    // Estilização opcional
-    const playerStyle: React.CSSProperties = {
-        marginTop: "20px",
-        textAlign: "center",
-    };
-
     return (
-        <div style={playerStyle}>
+        <div className="voice-player-container">
             <audio controls onEnded={onEnded}>
                 <source src={audioSrc} type="audio/mpeg" />
                 Your browser does not support the audio element.

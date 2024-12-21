@@ -26,3 +26,20 @@
 .enter-button {
     background-color: #d4edda;
 }
+
+/* Estilos para dispositivos menores que 525px */
+@media (max-width: 525px) {
+    .keyboard-container {
+        transform: scale(0.85); /* Reduz o tamanho em 15% */
+    }
+
+    .keyboard-button {
+        margin: 4px; /* Ajusta os espaçamentos para manter a harmonia */
+        padding: 8px 12px; /* Reduz o padding */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    .keyboard-row {
+        margin-bottom: 5px; /* Reduz o espaçamento entre as linhas */
+    }
+}

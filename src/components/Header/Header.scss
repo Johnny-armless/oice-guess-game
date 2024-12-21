@@ -21,15 +21,56 @@
 }
 
 .score-container.success {
-    background-color: #4CAF50;  /* Verde para quando a pontuação é maior ou igual a 33 */
+    background-color: #4CAF50; /* Verde para quando a pontuação é maior ou igual a 33 */
 }
 
 .score-container.error {
-    background-color: #F44336;  /* Vermelho para quando a pontuação é menor que 33 */
+    background-color: #F44336; /* Vermelho para quando a pontuação é menor que 33 */
 }
 
 .score-title {
     color: white;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* Media Query para dispositivos menores */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px; /* Reduz o padding em telas menores */
+        flex-direction: column; /* Mantém o layout em coluna */
+    }
+
+    .header-title {
+        font-size: 20px; /* Reduz o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .score-container {
+        padding: 8px 15px; /* Reduz o espaçamento interno */
+        margin-top: 5px; /* Margem superior reduzida */
+    }
+
+    .score-title {
+        font-size: 16px; /* Tamanho menor para o texto */
+    }
+}
+
+/* Media Query para dispositivos muito pequenos (celulares menores, ex.: 320px) */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 5px; /* Padding ainda menor para telas compactas */
+    }
+
+    .header-title {
+        font-size: 18px; /* Fonte menor para encaixar em telas menores */
+    }
+
+    .score-container {
+        padding: 5px 10px; /* Reduz ainda mais o espaçamento interno */
+    }
+
+    .score-title {
+        font-size: 14px; /* Texto mais compacto */
+    }
 }

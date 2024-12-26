@@ -1,25 +1,41 @@
 .next-voice-button-container {
-    display: flex;
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;  /* Centraliza verticalmente */
-    position: absolute;  /* Posiciona o botão fora do fluxo normal da página */
-    bottom: 185px;  /* Ajuste de posição para que o botão fique na parte inferior */
-    left: 0;
-    right: 0;
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px; /* Espaço acima do contêiner */
+    height: 100px; /* Altura do contêiner para centralizar bem */
+    width: 100%; /* Ocupa toda a largura disponível */
 }
 
 .next-voice-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: #fff;
+    padding: 12px 20px; /* Ajusta o tamanho do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #4CAF50; /* Cor do botão */
+    color: white; /* Cor do texto */
     border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 
-    &:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
+    &:hover {
+        background-color: #45A049; /* Cor ao passar o mouse */
+    }
+
+    &:active {
+        background-color: #3E8E41; /* Cor ao clicar */
+        box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra interna */
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .next-voice-button-container {
+        margin-top: 15px; /* Ajusta o espaço superior */
+        height: auto; /* Remove a altura fixa */
+    }
+
+    .next-voice-button {
+        width: 28%; /* Torna o botão mais largo em telas pequenas */
+        font-size: 14px; /* Reduz o tamanho da fonte */
     }
 }

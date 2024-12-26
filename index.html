@@ -2,12 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Guess the Voice</title>
+
+    <!-- Ícone da página -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Fonte Google (opcional, personalizada) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <!-- Estilo Global -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4; /* Fundo neutro */
+        color: #333; /* Cor padrão do texto */
+      }
+      #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Garante que o conteúdo ocupe a tela inteira */
+        width: 100%; /* Certifica-se de ocupar toda a largura */
+        padding: 0 20px; /* Adiciona espaçamento lateral */
+        box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Script do React -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
